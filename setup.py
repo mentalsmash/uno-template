@@ -1,5 +1,5 @@
 ###############################################################################
-# (C) Copyright SETUP_YEAR SETUP_AUTHOR
+# (C) Copyright 2020-2021 Andrea Sorbini
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,22 +19,22 @@ with open("README.md", "r") as readme_f:
     readme_contents = readme_f.read()
 
 setuptools.setup(
-    name="my_module",
-    version="SETUP_VERSION",
-    author="SETUP_AUTHOR",
-    author_email="SETUP_EMAIL",
-    description="SETUP_DESCRIPTION",
+    name="uno_template",
+    version="0.1.0",
+    author="Andrea Sorbini",
+    author_email="support@mentalsmash.org",
+    description="uno templating library",
     license="License :: OSI Approved :: Apache Software License",
     long_description=readme_contents,
     long_description_content_type="text/markdown",
-    url="SETUP_URL",
+    url="https://github.com/mentalsmash/uno-template.git",
     packages=setuptools.find_packages(),
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: Apache Software License",
     ],
-    python_requires='>=SETUP_PY_MIN, <4',
+    python_requires='>=3.6, <4',
     install_requires=[
         # Add your pip dependencies here
         # (regenerate requirements.txt with `make venv.freeze`)

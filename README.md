@@ -1,3 +1,3 @@
-# my_module - SETUP_DESCRIPTION
+# uno_template - uno templating library
 
 A simple Python module.

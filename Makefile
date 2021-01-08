@@ -1,5 +1,5 @@
 ################################################################################
-# (C) Copyright SETUP_YEAR SETUP_AUTHOR
+# (C) Copyright 2020-2021 Andrea Sorbini
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
 # limitations under the License.
 ################################################################################
 
-include template-init.mk
 
-# MODULE := my_module
-# include python-module.mk
+
+MODULE := uno_template
+include python-module.mk
