@@ -28,8 +28,10 @@ DEPS_PIP := wheel \
             twine
 DEPS_APT := python3-pip
 
+comma := ,
+
 define DIST_TGT
-$(shell bash -c 'ls $(DIST_DIR)/$(subst _,{_,-},$(MODULE))-$(VERSION)*')
+$(shell bash -c 'ls $(DIST_DIR)/$(subst _,{_$(comma)-},$(MODULE))-$(VERSION)*')
 endef
 
 VENV_DIR ?= venv
