@@ -36,7 +36,8 @@ setuptools.setup(
     ],
     python_requires='>=3.6, <4',
     install_requires=[
-        # Add your pip dependencies here
-        # (regenerate requirements.txt with `make venv.freeze`)
+        "yaml-serde",
+        "uno-log",
+        "jinja2"
     ],
 )
