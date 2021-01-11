@@ -41,6 +41,9 @@ def configure(*args, **kwargs):
 def templates():
     return Templates.instance()
 
+def template(src):
+    return Templates.instance().template(src)
+
 class Templates:
     def __init__(self, package, package_path):
         args = {}
@@ -172,11 +175,15 @@ class TemplateRenderer:
     def render(self, obj, repr,
             to_file=None, append_to_file=False,
             context=None, inline=False,
+            src=None,
             **kwargs):
         if inline:
             repr_tmplt = repr
         else:
-            repr_tmplt = self.repr_tmplt(obj, repr)
+            if src is not None:
+                repr_tmplt = src
+            else:
+                repr_tmplt = self.repr_tmplt(obj, repr)
             logger.debug("[render] {} -> {}", repr, repr_tmplt)
 
         tmplt_ctx = self.repr_ctx(obj, repr, repr_tmplt, **kwargs)
